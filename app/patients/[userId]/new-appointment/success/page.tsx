@@ -22,7 +22,7 @@ const RequestSuccess = async ({
       <div className="success-img">
         <Link href="/">
           <Image
-            src="/assets/icons/logo-full.svg"
+            src="/assets/icons/logo.png"
             height={1000}
             width={1000}
             alt="logo"
@@ -63,13 +63,19 @@ const RequestSuccess = async ({
               width={24}
               alt="calendar"
             />
-            <p> {formatDateTime(appointment.schedule).dateTime}</p>
+            <p> {formatDateTime(appointment.schedule).dateTime}</p><br />
+            <p>Your Id: {appointmentId}</p>
           </div>
         </section>
 
         <Button variant="outline" className="shad-primary-btn" asChild>
           <Link href={`/patients/${userId}/new-appointment`}>
             New Appointment
+          </Link>
+        </Button>
+        <Button variant="outline" className="shad-primary-btn" asChild>
+          <Link href={`/`}>
+            Go back to Homepage
           </Link>
         </Button>
 
